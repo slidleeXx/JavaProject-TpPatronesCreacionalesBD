@@ -60,23 +60,20 @@ public class Main {
 
 
         //Creacion de Usuarios
-        Usuario usuario1 = Usuario.builder()
-                .nombre("Pedro Perez")
-                .fechaNacimiento("02/04/2003")
-                .direccion("Calle Falsa 123")
-                .email("pedroperez@hotmail.com")
-                .telefono(261)
+        Usuario usuario1 = new Usuario.Builder("Pedro Perez","02/04/2003")
+                .setDireccion("Calle Falsa 123")
+                .setEmail("pedroperez@hotmail.com")
+                .setTelefono(261)
                 .build();
         System.out.println("\nSe ha logueado el usuario: "+usuario1.getNombre()+ ", email: "+usuario1.getEmail());
 
-        Usuario usuario2 = Usuario.builder()
-                .nombre("Marta Gomez")
-                .fechaNacimiento("23/05/97")
-                .direccion("Calle Buena Nueva 990")
-                .email("martagomez@hotmail.com")
-                .telefono(261)
+        Usuario usuario2 = new Usuario.Builder("Marta Gomez","23/05/97")
+
+                .setDireccion("Calle Buena Nueva 990")
+                .setEmail("martagomez@hotmail.com")
+                .setTelefono(261)
                 .build();
-        System.out.println("\nSe ha logueado el usuario: "+usuario2.getNombre()+ ", email: "+usuario2.getEmail());
+        System.out.println("\nSe ha logeado el usuario: "+usuario2.getNombre()+ ", email: "+usuario2.getEmail());
 
         //Prestamo prototipo y clonable
         Prestamo prestamo = new Prestamo(librodigital1, usuario1, "01/01/2000", "01/02/2000");
@@ -90,6 +87,8 @@ public class Main {
         Prestamo prestamo2 = (Prestamo) prestamo.clone();
         prestamo2.setUsuario(usuario2);
         prestamo2.mostrar();
+
+
 
     }
 }

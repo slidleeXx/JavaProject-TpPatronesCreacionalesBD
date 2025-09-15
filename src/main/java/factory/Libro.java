@@ -1,10 +1,6 @@
 package main.java.factory;
 
-import lombok.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 public abstract class Libro implements Cloneable {
     private String nombre;
     private String autor;
@@ -25,4 +21,28 @@ public abstract class Libro implements Cloneable {
         }
     }
 
+    // Getters y Seters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public String getFormato() {
+        return formato;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public void setFormato(String formato) {
+        this.formato = formato;
+    }
 }

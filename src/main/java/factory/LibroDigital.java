@@ -1,18 +1,14 @@
 package main.java.factory;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-
-@Data
 public class LibroDigital extends Libro {
 
-
-    public LibroDigital(String nombre, String autor, String formato) {
-        super(nombre, autor, formato);
+    public LibroDigital(String nombre , String autor , String formato) {
+        super.setNombre(nombre);
+        super.setAutor(autor);
+        super.setFormato(formato);
     }
+
+
 
     public void mostrarInfoDisp (){
 

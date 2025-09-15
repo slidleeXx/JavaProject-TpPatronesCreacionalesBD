@@ -1,5 +1,4 @@
 package main.java.abstractfactory;
-import lombok.NoArgsConstructor;
 
 import main.java.factory.LibroDigital;
 import main.java.factory.LibroFisico;

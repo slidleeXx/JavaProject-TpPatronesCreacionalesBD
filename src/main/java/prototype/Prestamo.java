@@ -1,13 +1,7 @@
 package main.java.prototype;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import main.java.builder.Usuario;
 import main.java.factory.Libro;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 
 public class Prestamo implements Cloneable{
     Libro libro;
@@ -15,6 +9,12 @@ public class Prestamo implements Cloneable{
     private String fechaInicio;
     private String fechaFin;
 
+    public Prestamo(Libro libro, Usuario usuario, String fechaInicio, String fechaFin) {
+        this.libro = libro;
+        this.usuario = usuario;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+    }
 
 
     public void mostrar() {
@@ -36,5 +36,28 @@ public class Prestamo implements Cloneable{
             throw new RuntimeException(e);
         }
     }
+    // Getters y Setters
 
+    public String getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public String getFechaFin() {
+        return fechaFin;
+    }
+    public void setFechaFin(String fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
+    public void setLibro(Libro libro) {
+        this.libro = libro;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public void setFechaInicio(String fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
 }
