@@ -1,5 +1,9 @@
 package main.java.abstractfactory;
 
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class AdminUI implements InterfazUI{
     @Override
     public void loguearse() {
